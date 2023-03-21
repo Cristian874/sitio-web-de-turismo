@@ -1,0 +1,95 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.destino{
+
+
+    &__heading{
+        text-align: center;
+        font-size: 2rem;
+        @include m.tablet {
+            font-size: 3.5rem; 
+            
+         }
+    }
+
+    &__grid{
+        margin-top: 5rem;
+        @include m.tablet {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 3rem; 
+            
+         }
+         @include m.desktop {
+            grid-template-columns: repeat(4,1fr); 
+            
+          }
+    }
+    &__card{
+        margin-top: 5rem;
+        @include m.tablet {
+            margin-top: 0; 
+            
+         }
+    }
+
+    &__imagen{
+        overflow: hidden;
+    }
+
+    &__img{
+        transition-property: transform, -webkit-transform;
+        transition-duration: 800ms;
+        &:hover{
+            transform: scale(1.2);
+            cursor: pointer;
+            
+        }
+    }
+    &__descripcion{
+        margin: 2rem 0;
+    }
+
+
+    &__titulo{
+        font-size: 1.8rem;
+        transition-property: color;
+        transition-duration: .5s;
+
+        &:hover{
+            color: v.$colorPrincipal;
+        }
+    }
+    &__pais{
+        color: v.$colorPais;
+        font-size: 1.2rem;
+    }
+
+    &__texto{
+        text-align: center;
+        color: v.$colorPais;
+        text-align: left;
+        margin: 2rem 0;
+    }
+    &__dias{
+        font-size: 700;
+        font-size: 1.7rem;
+    }
+
+    &__paquete{
+        margin-top: 5rem ;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+    }
+
+    &__boton{
+        width: 100%;
+        @include m.tablet {
+            width: unset; 
+            
+         }
+    }
+}

@@ -1,0 +1,46 @@
+@use 'variables' as v;
+
+@use 'mixins' as m;
+
+.separacion{
+    margin-top: 15rem;
+}
+
+.boton{
+    display: block;
+    background-color: v.$colorPrincipal;
+    color: v.$colorBlanco;
+    padding:  2rem ;
+    text-align: center;
+    border-radius: .1rem;
+    font-size: 1.6rem;
+ 
+    text-transform: uppercase;
+    border-radius: .1rem solid v.$colorPrincipal;
+    transition-property: background-color,border,color;
+    transition-duration: .3s;
+    border: none;
+
+    &:hover{
+        background-color: unset;
+        border: .1rem solid v.$colorPrincipal;
+        color: v.$colorPrincipal;
+    }
+
+
+    @include m.tablet {
+        display: inline-block; 
+       
+        
+    }
+}
+.abajo{
+    background-color: #fff;
+    box-shadow: 5px 5px 5px 5px rgba(0,0,0,.2);
+    padding: 2rem 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+
+}

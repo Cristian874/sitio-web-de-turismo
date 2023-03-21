@@ -1,0 +1,32 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.navegacion{
+    display: none;
+    @include m.desktop {
+        display: unset; 
+        
+     }
+
+    margin: 2rem 0;
+    &__link{
+        color: v.$colorBlanco;
+        font-size: 1.8rem;
+
+        text-align: center;
+        display: block;
+        margin-bottom: 2rem;
+        @include m.desktop 
+        {
+            display: unset;
+            margin-right: 2rem; 
+            
+            
+         }
+        
+    }
+}
+
+.link{
+    color: v.$colorNegro;
+}

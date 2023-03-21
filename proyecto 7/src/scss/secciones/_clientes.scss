@@ -1,0 +1,74 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.clientes{
+
+    background-color: v.$colorSecundario;
+    padding: 10rem 2rem;
+    @include m.tablet { 
+          padding: 10rem 5rem;
+        
+     }
+
+    &__grid{
+        @include m.tablet {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 3rem;
+            align-items: center; 
+            
+         }
+    }
+
+    &__card{
+        margin-top: 5rem;
+        @include m.tablet {
+            margin-top: 0; 
+            
+         }
+    }
+
+    &__img{
+
+        width: 5rem;
+        height: 5rem;
+    }
+
+    &__texto{
+        margin: 4rem 0;
+        font-size: 2rem;
+    }
+
+    &__datos{
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    &__puesto{
+        color: v.$colorPais;
+    }
+
+    &__calificacion{
+        background-color: v.$colorBlanco;
+        margin-top:5rem;
+
+    }
+
+    &__estrellas{
+        padding: 2rem;
+        width: 80%;
+     
+
+       @include m.tablet { 
+        width: 50%;
+        padding: 5rem 2rem;
+        margin: 0 auto;
+        
+        
+        }
+    }
+
+
+
+}

@@ -1,0 +1,45 @@
+@use 'variables' as v;
+*{
+    padding: 0;
+    margin: 0;
+}
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+body{
+    
+    font-family: v.$fuentePrincipal;
+}
+*::before,*::after{
+    box-sizing: inherit;
+}
+.contenedor{
+    width: 95%;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+a{
+    text-decoration: none;
+    font-weight: 500;
+}
+li{
+    list-style: none;
+}
+img{
+    display: block;
+    width: 100%;
+}
+h1,h2{
+
+    font-weight: 700;
+
+
+}
+p{
+    font-weight: 300;
+    font-size: 1.4rem;
+    color: v.$colorParrafo;
+    line-height: 1.5;
+}

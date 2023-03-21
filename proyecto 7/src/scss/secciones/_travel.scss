@@ -1,0 +1,65 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.travel{
+
+
+
+    &__informacion{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__boton{
+        padding: 1rem 2rem;
+    }
+    &__heading{
+        font-size: 2rem;
+        @include m.tablet {
+            font-size: 3.5rem; 
+            
+         }
+    }
+
+    &__grid{
+          margin-top: 5rem;
+        @include m.tablet {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 3rem; 
+            
+         }
+    }
+
+    &__card{
+        margin-top: 2rem;
+        @include m.tablet {
+            margin-top: 0; 
+            
+         }
+    }
+
+    &__blog{
+        font-size: 1.6rem;
+        color: v.$colorTerciario;
+    }
+    &__title{
+        font-size: 2rem;
+        margin-top: 2rem;
+        transition-property: background-color;
+        transition-duration: .8s;
+        &:hover{
+            color: v.$colorPrincipal;
+        }
+    }
+
+    &__texto{
+        color: v.$colorTerciario;
+        margin: 2rem 0;
+
+    }
+    &__fecha{
+        color: v.$colorTerciario;
+    }
+}

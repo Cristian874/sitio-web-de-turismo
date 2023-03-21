@@ -1,0 +1,63 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.slider{
+
+
+
+    &__imagen{
+        height: 50rem;
+        background-image:linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 1, 1, 0.6)),  url(../img/ocho.webp);
+        width: 70%;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+  
+     
+
+
+
+
+    }
+
+    &__numero{
+        font-size: 3rem;
+        background-color: v.$colorBlanco;
+        padding: 2rem;
+        border-radius: 50%;
+        color: v.$colorPrincipal;
+   
+    }
+
+    &__pais{
+        font-size: 2rem;
+        color: v.$colorBlanco;
+        margin:  2rem 0;
+    }
+
+    &__heading{
+        font-size: 2rem;
+        color: v.$colorBlanco;
+        margin-top: 2rem;
+        @include m.tablet {
+            font-size: 3.5rem;
+     
+            
+         }
+    }
+
+    &__precio{
+        margin-top: 2rem;
+        color: v.$colorBlanco;
+        font-size: 1.8rem;
+    }
+
+
+
+    &__span{
+        color: v.$colorPrincipal;
+    }
+
+
+}

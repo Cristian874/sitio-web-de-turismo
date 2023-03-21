@@ -1,0 +1,40 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.footer{
+
+    &__grid{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 3rem;
+        @include m.tablet {
+            grid-template-columns: repeat(4,1fr); 
+            
+         }
+    }
+
+    &__heading{
+        font-size: 2rem;
+    }
+
+    &__lista{
+        margin-top: 2rem;
+    }
+    &__link{
+        font-size: 1.8rem;
+        margin-top: 2rem;
+        color: v.$colorTerciario;
+    }
+    &__redes{
+        margin-top: 2rem;
+        display: flex;
+        gap: 2rem;
+    }
+
+    &__icono{
+        width: 2rem;
+        height: 2rem;
+    }
+
+
+}
